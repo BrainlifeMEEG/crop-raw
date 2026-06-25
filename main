@@ -1,0 +1,18 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=02:00:00
+#PBS -N MEEG_crop
+#SBATCH --mem=20G
+
+# PBS is a computer software that performs job-scheduling
+# Copyright (c) 2026 brainlife.io
+#
+# This is the main file run by the brainlife.io orchestration system
+#
+# Author: Maximilien Chaumon
+
+set -e
+set -x
+
+# Run the actual python code
+singularity exec docker://aunnikri642/app-freesurfer-mne-source-recon python3 main.py

@@ -1,0 +1,5 @@
+{
+    "mne": "path/to/meg.fif",
+    "tmin": null,
+    "tmax": null
+}
