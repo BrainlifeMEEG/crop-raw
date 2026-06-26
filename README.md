@@ -6,7 +6,6 @@ This Brainlife.io application crops raw MEG/EEG data to a specified time window.
 
 The app generates:
 - Cropped data in MNE-Python format
-- Comprehensive HTML report comparing original and cropped data
 
 ## Inputs
 
@@ -19,7 +18,6 @@ The app generates:
 ### Output Files
 
 - **meg.fif**: Cropped MEG/EEG data file in MNE format
-- **report_crop.html**: Interactive HTML report showing original and cropped data with power spectral density
 
 ## Configuration Parameters
 
@@ -36,7 +34,6 @@ The app generates:
    - Set `tmin` to the desired start time in seconds (or leave `null` for start of recording)
    - Set `tmax` to the desired end time in seconds (or leave `null` for end of recording)
 4. Submit the task
-5. Monitor task completion and review outputs in the report viewer
 
 ### Local Testing
 
@@ -55,12 +52,6 @@ python main.py
 - `tmax=null` defaults to the end of the recording
 - Times are specified in seconds relative to the recording start
 - The crop is applied in-place after loading (data is preloaded for efficiency)
-
-### Report Generation
-
-Uses MNE-Python's Report class to create an interactive HTML report with:
-- Original data summary and PSD
-- Cropped data summary and PSD
 
 ## Authors
 

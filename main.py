@@ -46,7 +46,7 @@ from brainlife_utils import (
 setup_matplotlib_backend()
 config = load_config()
 
-ensure_output_dirs('out_dir', 'out_report', 'out_figs')
+ensure_output_dirs('out_dir')
 
 # == LOAD DATA ==
 fname = config['mne']
@@ -58,12 +58,6 @@ tmax = config['tmax']
 
 # == CROP DATA ==
 raw.crop(tmin=tmin, tmax=tmax)
-
-# == GENERATE REPORT ==
-report = mne.Report(title='Crop Report')
-report.add_raw(raw_orig, 'Original Data', psd=True)
-report.add_raw(raw, 'Cropped Data', psd=True)
-report.save('out_report/report_crop.html', overwrite=True)
 
 # == SAVE CROPPED DATA ==
 raw.save('out_dir/meg.fif', overwrite=True)
