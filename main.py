@@ -60,7 +60,7 @@ tmax = config['tmax']
 raw.crop(tmin=tmin, tmax=tmax)
 
 # == SAVE CROPPED DATA ==
-raw.save('out_dir/meg.fif', overwrite=True)
+raw.save('out_dir/raw.fif', overwrite=True)
 
 # == CREATE PRODUCT.JSON ==
 product_items = []
