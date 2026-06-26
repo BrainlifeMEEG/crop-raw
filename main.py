@@ -70,7 +70,7 @@ crop_duration = raw.times[-1] - raw.times[0]
 
 tmin_str = str(tmin) if tmin is not None else "start"
 tmax_str = str(tmax) if tmax is not None else "end"
-add_info_to_product(product_items, f"Cropped to: {tmin_str} - {tmax_str} s")
+add_info_to_product(product_items, f"Cropped to: {tmin_str} - {tmax_str} s", 'success')
 add_info_to_product(product_items, f"Original duration: {orig_duration:.3f} s")
 add_info_to_product(product_items, f"Cropped duration: {crop_duration:.3f} s")
 
