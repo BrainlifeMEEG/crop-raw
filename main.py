@@ -2,8 +2,7 @@
 Crop raw MEG/EEG data to a specified time window.
 
 This app loads raw neuroimaging data and crops it to a time window
-defined by tmin and tmax parameters. It produces a report comparing
-the original and cropped data duration.
+defined by tmin and tmax parameters.
 
 Inputs
 ------
@@ -14,8 +13,6 @@ Outputs
 -------
 meg.fif : str
     Cropped MEG/EEG data file in MNE format.
-report_crop.html : str
-    Interactive HTML report showing original and cropped data information.
 """
 
 # Copyright (c) 2026 brainlife.io
